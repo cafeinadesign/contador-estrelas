@@ -1,12 +1,13 @@
 {
-  "short_name": "Contador",
+  "short_name": "Contador de Estrelas",
   "name": "Contador de Estrelas",
   "icons": [{
     "src": "icon.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "https://cafeinadesign.github.io/contador-estrelas/",
   "background_color": "#222222",
-  "theme_color": "#e08524"
+  "theme_color": "#e08524",
+  "display": "standalone"
 }
