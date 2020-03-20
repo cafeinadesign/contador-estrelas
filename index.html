@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contador de Estrelas | PWA com Ionic 5 e Vue.js</title>
+  <meta name="description" content="Olhe para o céu e veja quantas estrelas tem.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#e08524">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+  <div class="ion-page" id="app">
+    <ion-header >
+      <ion-toolbar color="primary">
+        <ion-title>Contador de estrelas</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <template>
+      <ion-content class="ion-text-center" color="dark">
+        <ion-grid>
+          <ion-row class="ion-align-items-center">
+            <ion-col>
+              <img src="icon.png" alt="" width="96">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <h1>{{contador}}</h1>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed" @click="contador += 1">
+          <ion-fab-button color="secondary">
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-content>
+    </template>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        contador: 0
+      }
+    });
+  </script>
+</body>
+
+</html>
